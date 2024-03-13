@@ -3,10 +3,16 @@ kind: Deployment
 metadata:
   name: oai
   labels:
-        app: oai  
+    app: oai  
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: oai
   template:
+    metadata: 
+      labels:
+        app: oai
     spec:
       containers:
         - name: oai
