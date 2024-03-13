@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oai3
+  labels:
+    app: oai3 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oai3
+  template:
+    metadata: 
+      labels:
+        app: oai3
+    spec:
+      containers:
+        - name: oai3
+          image: oaisoftwarealliance/oai-nr-ue:develop
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
