@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    - name: oai
-      labels:
+  name: oai
+  labels:
         app: oai  
 spec:
   replicas: 1
