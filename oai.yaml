@@ -20,12 +20,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-        - name: oai
+        - name: oai2
           image: oaisoftwarealliance/oai-nr-cuup:develop
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-        - name: oai
+        - name: oai3
           image: oaisoftwarealliance/oai-nr-ue:develop
           imagePullPolicy: Always
           ports:
