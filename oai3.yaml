@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: oai3
-          image: oaisoftwarealliance/oai-flexric:dev
+          image: oaisoftwarealliance/oai-ausf:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
