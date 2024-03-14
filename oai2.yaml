@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: oai2
-          image: oaisoftwarealliance/oai-gnb:develop
+          image: oaisoftwarealliance/oai-smf:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
