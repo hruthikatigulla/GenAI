@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oai6
+  labels:
+    app: oai6 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oai6
+  template:
+    metadata: 
+      labels:
+        app: oai6
+    spec:
+      containers:
+        - name: oai6
+          image: oaisoftwarealliance/oai-udr:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

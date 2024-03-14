@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oai7
+  labels:
+    app: oai7 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oai7
+  template:
+    metadata: 
+      labels:
+        app: oai7
+    spec:
+      containers:
+        - name: oai7
+          image: oaisoftwarealliance/oai-upf:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
