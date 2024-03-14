@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: oai2
-          image: oaisoftwarealliance/oai-nr-cuup:develop
+          image: oaisoftwarealliance/oai-lte-ue:develop
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
