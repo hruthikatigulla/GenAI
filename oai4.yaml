@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oai4
+  labels:
+    app: oai4 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oai4
+  template:
+    metadata: 
+      labels:
+        app: oai4
+    spec:
+      containers:
+        - name: oai4
+          image: oaisoftwarealliance/oai-nrf:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

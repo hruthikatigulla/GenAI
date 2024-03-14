@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oai5
+  labels:
+    app: oai5 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oai5
+  template:
+    metadata: 
+      labels:
+        app: oai5
+    spec:
+      containers:
+        - name: oai5
+          image: oaisoftwarealliance/oai-udm:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
